@@ -1,6 +1,5 @@
 package com.arribas.navigationmaindrawer.ui.view
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -12,16 +11,12 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.arribas.navigationmaindrawer.R
 import com.arribas.navigationmaindrawer.ui.navigation.DrawerItem
 import com.arribas.navigationmaindrawer.ui.navigation.NavTag
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyBottomAppBar(
     currentTab: NavTag,
@@ -35,7 +30,7 @@ fun MyBottomAppBar(
     ) {
 
         for (navItem in navigationItemContentList) {
-            if(navItem.id == NavTag.INTRA){
+            if(!navItem.menuBottomVisible){
                 continue
             }
 

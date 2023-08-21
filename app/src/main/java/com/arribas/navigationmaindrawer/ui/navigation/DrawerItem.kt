@@ -6,5 +6,7 @@ data class DrawerItem(
     val id: NavTag,
     val title: String,
     val contentDescription: String,
-    val icon: ImageVector
+    val icon: ImageVector,
+    val menuLeftVisible: Boolean = false,
+    val menuBottomVisible: Boolean = false
 )
